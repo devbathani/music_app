@@ -21,6 +21,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
+
+  bool isplaying = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,11 +53,28 @@ class _HomeScreenState extends State<HomeScreen> {
             elevation: 2.0,
             backgroundColor: Colors.white,
             onPressed: () {
-              AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
-              assetsAudioPlayer.open(Audio("assets/audio/middle.mp3"));
+              if (!isplaying) {
+                debugPrint(isplaying.toString());
+                print(assetsAudioPlayer.open(Audio("assets/audio/middle.mp3")));
+                // print("Asset ${assetsAudioPlayer.isPlaying}");
+                print("object");
+                setState(() {
+                  isplaying = true;
+                });
+              } else {
+                print("hey");
+                // assetsAudioPlayer.
+                assetsAudioPlayer.pause();
+                // assetsAudioPlayer.play();
+                setState(() {
+                  isplaying = false;
+                });
+              }
             },
+            // : isplaying?Icon(Icons.pause):Icon(Icons.play_arrow),
+            // color: Colors.black,
             child: Icon(
-              Icons.play_arrow,
+              isplaying ? Icons.pause : Icons.play_arrow,
               color: Colors.black,
             ),
           ),
