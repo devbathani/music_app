@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:jiju_birthday/widgets/energetic.dart';
+import 'package:jiju_birthday/widgets/epic.dart';
+import 'package:jiju_birthday/widgets/smooth.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,56 +25,68 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.red, Colors.orange, Colors.yellow],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter)),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: DefaultTabController(
+        length: 3,
+        child: SafeArea(
+          top: true,
+          child: Scaffold(
+            appBar: PreferredSize(
+              preferredSize: Size.fromHeight(150.0),
+              child: AppBar(
+                title: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "MY TRACKS",
+                    style: TextStyle(fontSize: 32, fontFamily: 'Biger'),
+                  ),
+                ),
+                flexibleSpace: Container(
+                  decoration: BoxDecoration(
+                      gradient: LinearGradient(colors: [
+                    Colors.blueAccent,
+                    Colors.black,
+                  ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
+                ),
+                bottom: TabBar(
+                  indicatorColor: Colors.pinkAccent,
+                  indicatorWeight: 2,
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.white,
+                  tabs: [
+                    Tab(
+                      child: Text(
+                        "SMOOTH",
+                        style: TextStyle(fontSize: 16, fontFamily: 'Hysteria'),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        "ENERGETIC",
+                        style: TextStyle(fontSize: 16, fontFamily: 'Hysteria'),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        "EPIC",
+                        style: TextStyle(fontSize: 16, fontFamily: 'Hysteria'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            body: TabBarView(
+              children: [
+                Smooth_Tracks(),
+                Energetic_Tracks(),
+                Epic_Tracks(),
+              ],
+            ),
+          ),
+        ),
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FloatingActionButton(
-            elevation: 2.0,
-            backgroundColor: Colors.white,
-            onPressed: () {},
-            child: Icon(
-              Icons.skip_previous,
-              color: Colors.black,
-            ),
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          FloatingActionButton(
-            elevation: 2.0,
-            backgroundColor: Colors.white,
-            onPressed: () {
-              AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
-              assetsAudioPlayer.open(Audio("assets/audio/middle.mp3"));
-            },
-            child: Icon(
-              Icons.play_arrow,
-              color: Colors.black,
-            ),
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          FloatingActionButton(
-            elevation: 2.0,
-            backgroundColor: Colors.white,
-            onPressed: () {},
-            child: Icon(
-              Icons.skip_next,
-              color: Colors.black,
-            ),
-          ),
-        ],
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
