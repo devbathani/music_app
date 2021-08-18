@@ -12,10 +12,11 @@ class _Energetic_TracksState extends State<Energetic_Tracks> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.black, Colors.cyan],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight)),
+          image: DecorationImage(
+            image: AssetImage('background/back.gif'),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Energetic_List(),
       ),
     );

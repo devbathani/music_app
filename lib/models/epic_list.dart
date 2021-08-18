@@ -43,15 +43,15 @@ class _Epic_ListState extends State<Epic_List> {
       children: [
         Column(
           children: [
+//Song 1
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -67,9 +67,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.53,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/astronaut.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn2 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn1,
@@ -77,7 +92,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn1 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/la mama.mp3"),
@@ -100,15 +115,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 2
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -124,9 +139,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.21,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/celebration.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn3 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn2,
@@ -134,7 +164,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn2 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/astronaut.mp3"),
@@ -157,15 +187,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 3
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -181,9 +211,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.49,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/humble.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn4 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn3,
@@ -191,7 +236,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn3 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/celebration.mp3"),
@@ -214,15 +259,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 4
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -238,9 +283,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.57,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/mind.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn5 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn4,
@@ -248,7 +308,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn4 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/humble.mp3"),
@@ -271,15 +331,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 5
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -295,9 +355,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.63,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/mj.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn6 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn5,
@@ -305,7 +380,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn5 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/mind.mp3"),
@@ -328,15 +403,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 6
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -352,9 +427,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.52,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/panda.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn7 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn6,
@@ -362,7 +452,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn6 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/mj.mp3"),
@@ -385,15 +475,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 7
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -409,9 +499,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.60,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/queen.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn8 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn7,
@@ -419,7 +524,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn7 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/panda.mp3"),
@@ -442,15 +547,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 8
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -466,9 +571,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.30,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/rockstar.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn9 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn8,
@@ -476,7 +596,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn8 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/queen.mp3"),
@@ -499,15 +619,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 9
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -523,9 +643,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.52,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/run.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn10 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn9,
@@ -533,7 +668,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn9 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/rockstar.mp3"),
@@ -556,15 +691,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 10
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -580,9 +715,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.61,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/way.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn11 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn10,
@@ -590,7 +740,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn10 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/run.mp3"),
@@ -613,15 +763,15 @@ class _Epic_ListState extends State<Epic_List> {
                 ),
               ),
             ),
+//Song 11
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.085,
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: Colors.white.withOpacity(0.2),
-                ),
+                    borderRadius: BorderRadius.circular(5),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -637,9 +787,24 @@ class _Epic_ListState extends State<Epic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.40,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/la mama.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn1 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn11,
@@ -647,7 +812,7 @@ class _Epic_ListState extends State<Epic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn11 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/way.mp3"),

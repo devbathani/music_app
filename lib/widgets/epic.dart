@@ -19,10 +19,11 @@ class _Epic_TracksState extends State<Epic_Tracks> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.black, Colors.cyanAccent],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight)),
+          image: DecorationImage(
+            image: AssetImage('background/back.gif'),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Epic_List(),
       ),
     );

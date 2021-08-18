@@ -12,10 +12,11 @@ class _Smooth_TracksState extends State<Smooth_Tracks> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.black, Colors.blueAccent],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight)),
+          image: DecorationImage(
+            image: AssetImage('background/back.gif'),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Smooth_List(),
       ),
     );

@@ -17,7 +17,6 @@ const mood = 'https://youtu.be/GrAchTdepsU';
 const bills = 'https://youtu.be/NiF6-0UTqtc';
 const bb = 'https://youtu.be/FLGCGc7sAUw';
 
-
 class Energetic_List extends StatefulWidget {
   Energetic_List({Key? key}) : super(key: key);
 
@@ -50,6 +49,7 @@ class _Energetic_ListState extends State<Energetic_List> {
       children: [
         Column(
           children: [
+//Song 1
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -57,7 +57,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -73,9 +73,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.53,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/levitating.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn2 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn1,
@@ -83,7 +98,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn1 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/montero.mp3"),
@@ -106,6 +121,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 2
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -113,7 +129,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -129,9 +145,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.51,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/loco.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn3 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn2,
@@ -139,7 +170,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn2 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/levitating.mp3"),
@@ -162,6 +193,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 3
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -169,7 +201,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -185,9 +217,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.42,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/7rings.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn4 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn3,
@@ -195,7 +242,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn3 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/loco.mp3"),
@@ -218,6 +265,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 4
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -225,7 +273,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -241,9 +289,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.56,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/uptown.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn5 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn4,
@@ -251,7 +314,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn4 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/7rings.mp3"),
@@ -274,6 +337,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 5
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -281,7 +345,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -297,9 +361,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.46,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/mood.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn6 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn5,
@@ -307,7 +386,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn5 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/uptown.mp3"),
@@ -330,6 +409,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 6
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -337,7 +417,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -353,9 +433,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.61,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/bills.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn7 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn6,
@@ -363,7 +458,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn6 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/mood.mp3"),
@@ -386,6 +481,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 7
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -393,7 +489,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -409,9 +505,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.44,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/bb.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn8 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn7,
@@ -419,7 +530,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn7 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/bills.mp3"),
@@ -442,6 +553,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 8
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -449,7 +561,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -465,9 +577,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.45,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/nights.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn9 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn8,
@@ -475,7 +602,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn8 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/bb.mp3"),
@@ -498,6 +625,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 9
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -505,7 +633,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -521,9 +649,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.50,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/worth.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn10 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn9,
@@ -531,7 +674,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn9 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/nights.mp3"),
@@ -554,6 +697,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 10
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -561,7 +705,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -577,9 +721,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.55,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/pusher.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn11 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn10,
@@ -587,7 +746,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn10 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/worth.mp3"),
@@ -610,6 +769,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 11
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -617,7 +777,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -633,9 +793,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.43,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/gofuck.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn12 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn11,
@@ -643,7 +818,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn11 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/pusher.mp3"),
@@ -666,6 +841,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 12
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -673,7 +849,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                   color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -689,9 +865,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.34,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/havana.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn13 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn12,
@@ -699,7 +890,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn12 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/gofuck.mp3"),
@@ -722,6 +913,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 13
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -729,7 +921,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -745,9 +937,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.57,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/old town.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn14 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn13,
@@ -755,7 +962,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn13 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/havana.mp3"),
@@ -778,6 +985,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 ),
               ),
             ),
+//Song 14
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -785,7 +993,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                 width: MediaQuery.of(context).size.width * 0.95,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(5),
-                    color: Colors.white.withOpacity(0.2),),
+                    color: Colors.white.withOpacity(0.2)),
                 child: Row(
                   children: [
                     Padding(
@@ -801,9 +1009,24 @@ class _Energetic_ListState extends State<Energetic_List> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.52,
-                    ),
+                    Spacer(),
+                    IconButton(
+                        onPressed: () {
+                          if (playing == false) {
+                            setState(() {
+                              assetsAudioPlayer.open(
+                                Audio('assets/montero.mp3'),
+                                showNotification: true,
+                              );
+                              playbtn1 = Icons.pause;
+                            });
+                          }
+                        },
+                        icon: Icon(
+                          Icons.skip_next,
+                          color: Colors.white,
+                          size: 35,
+                        )),
                     IconButton(
                       icon: Icon(
                         playbtn14,
@@ -811,7 +1034,7 @@ class _Energetic_ListState extends State<Energetic_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing) {
+                        if (!playing && playbtn14 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(
                               Audio("assets/old town.mp3"),
