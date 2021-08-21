@@ -99,7 +99,7 @@ class _Smooth_ListState extends State<Smooth_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing && playbtn1 == Icons.play_arrow) {
+                        if (!playing && playbtn1 == Icons.play_arrow) { 
                           setState(() {
                             assetsAudioPlayer.open(Audio("assets/no lie.mp3"),
                                 showNotification: true,
