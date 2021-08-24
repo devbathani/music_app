@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jiju_birthday/widgets/energetic.dart';
-import 'package:jiju_birthday/widgets/epic.dart';
-import 'package:jiju_birthday/widgets/smooth.dart';
-
 import 'appbar.dart';
 
 void main() => runApp(MyApp());

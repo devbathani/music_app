@@ -99,7 +99,7 @@ class _Smooth_ListState extends State<Smooth_List> {
                         size: 30,
                       ),
                       onPressed: () {
-                        if (!playing && playbtn1 == Icons.play_arrow) { 
+                        if (!playing && playbtn1 == Icons.play_arrow) {
                           setState(() {
                             assetsAudioPlayer.open(Audio("assets/no lie.mp3"),
                                 showNotification: true,
@@ -1069,48 +1069,60 @@ class _Smooth_ListState extends State<Smooth_List> {
   }
 }
 
+// ignore: non_constant_identifier_names
 void nolie_launchurl() async =>
     await canLaunch(nolie) ? await launch(nolie) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void middle_launchurl() async =>
     await canLaunch(middle) ? await launch(middle) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void alliwant_launchurl() async => await canLaunch(alliwant)
     ? await launch(alliwant)
     : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void coldwater_launchurl() async => await canLaunch(coldplay)
     ? await launch(coldplay)
     : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void despacito_launchurl() async => await canLaunch(despacito)
     ? await launch(despacito)
     : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void feelinggood_launchurl() async =>
     await canLaunch(feeling) ? await launch(feeling) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void honey_launchurl() async =>
     await canLaunch(honey) ? await launch(honey) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void peaches_launchurl() async =>
     await canLaunch(peaches) ? await launch(peaches) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void stereo_launchurl() async =>
     await canLaunch(stereo) ? await launch(stereo) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void perfect_launchurl() async =>
     await canLaunch(perfect) ? await launch(perfect) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void sugar_launchurl() async =>
     await canLaunch(sugar) ? await launch(sugar) : throw "Could not launch";
 
+// ignore: non_constant_identifier_names
 void watermelon_launchurl() async => await canLaunch(watermelon)
     ? await launch(watermelon)
     : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void wego_launchurl() async =>
     await canLaunch(wego) ? await launch(wego) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void wrecked_launchurl() async =>
     await canLaunch(wrecked) ? await launch(wrecked) : throw "Could not launch";

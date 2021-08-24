@@ -1064,46 +1064,47 @@ class _Energetic_ListState extends State<Energetic_List> {
   }
 }
 
+// ignore: non_constant_identifier_names
 void uptown_launchurl() async => await canLaunch(uptownfunk)
     ? await launch(uptownfunk)
     : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void pusher_launchurl() async =>
     await canLaunch(pusher) ? await launch(pusher) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void levitating_launchurl() async => await canLaunch(levitating)
     ? await launch(levitating)
     : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void worth_launchurl() async =>
     await canLaunch(worth) ? await launch(worth) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void oldtown_launchurl() async =>
     await canLaunch(oldtown) ? await launch(oldtown) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void rings_launchurl() async =>
     await canLaunch(rings) ? await launch(rings) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void montero_launchurl() async =>
     await canLaunch(montero) ? await launch(montero) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void loco_launchurl() async =>
     await canLaunch(loco) ? await launch(loco) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void havana_launchurl() async =>
     await canLaunch(havana) ? await launch(havana) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void nights_launchurl() async =>
     await canLaunch(nights) ? await launch(nights) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void go_launchurl() async =>
     await canLaunch(go) ? await launch(go) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void mood_launchurl() async =>
     await canLaunch(mood) ? await launch(mood) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void bills_launchurl() async =>
     await canLaunch(bills) ? await launch(bills) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void bb_launchurl() async =>
     await canLaunch(bb) ? await launch(bb) : throw "Could not launch";

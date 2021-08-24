@@ -841,39 +841,39 @@ class _Epic_ListState extends State<Epic_List> {
     );
   }
 }
-
+// ignore: non_constant_identifier_names
 void astronaut_launchurl() async => await canLaunch(astronaut)
     ? await launch(astronaut)
     : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void celebration_launchurl() async => await canLaunch(celebration)
     ? await launch(celebration)
     : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void humble_launchurl() async =>
     await canLaunch(humble) ? await launch(humble) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void lamama_launchurl() async =>
     await canLaunch(lamama) ? await launch(lamama) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void mind_launchurl() async =>
     await canLaunch(mind) ? await launch(mind) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void mj_launchurl() async =>
     await canLaunch(mj) ? await launch(mj) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void panda_launchurl() async =>
     await canLaunch(panda) ? await launch(panda) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void queen_launchurl() async =>
     await canLaunch(queen) ? await launch(queen) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void rockstar_launchurl() async => await canLaunch(rockstar)
     ? await launch(rockstar)
     : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void run_launchurl() async =>
     await canLaunch(run) ? await launch(run) : throw "Could not launch";
-
+// ignore: non_constant_identifier_names
 void way_launchurl() async =>
     await canLaunch(way) ? await launch(way) : throw "Could not launch";
